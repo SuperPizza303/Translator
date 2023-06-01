@@ -1,0 +1,215 @@
+\doxysection{bin.\+h File Reference}
+\hypertarget{bin_8h}{}\label{bin_8h}\index{bin.h@{bin.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \"{}OWS.\+h\"{}}\newline
+{\ttfamily \#include \"{}Hex\+Dec.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{bin_8h_a0bb9b90b984532c71acb596b04a8cf37}{fw\+::bin\+::\+Complete\+Pointer}} (std\+::string pts, size\+\_\+t size=4, bool place\+\_\+back=false)
+\begin{DoxyCompactList}\small\item\em Заполняет массив символов нулями, для доведения указателя до нужных размеров \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{bin_8h_a86cb4187245647a43266ab81ea656962}{fw\+::bin\+::\+Prepare\+Pointer}} (size\+\_\+t ptr, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Преобразует указатель из целочисленного числа в массив символов \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{bin_8h_ace7180b0842e085c5761cb4fc20c3746}{fw\+::bin\+::\+Read\+Pointer}} (std\+::string bank)
+\begin{DoxyCompactList}\small\item\em Читает указатель с массива символов \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{bin_8h_a21357956c8401f6f9c6b892b9fc96150}{fw\+::bin\+::\+Create\+Pointer}} (size\+\_\+t ptr, size\+\_\+t size=4, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Создаёт указатель по заданным параметрам \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bin_8h_a55b60c8752b306fa358b743ff5ad0971}{fw\+::bin\+::fsetpos}} (size\+\_\+t pos, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию в файле без ограничений \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{bin_8h_ace16bb06fc4f6b7b45ba57d9f063ac12}{bin\+::\+Complete\+Pointer}} (std\+::string pts, size\+\_\+t size=4, bool place\+\_\+back=false)
+\begin{DoxyCompactList}\small\item\em ????????? ?????? ???????? ??????, ??? ????????? ????????? ?? ?????? ???????? \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{bin_8h_adb2ade8bf8aef47bc96a5df28c0a3a9c}{bin\+::\+Prepare\+Pointer}} (size\+\_\+t ptr, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em ??????????? ????????? ?? ?????????????? ????? ? ?????? ???????? \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{bin_8h_a3f12835cce68afc615eb73b37e4ec0ae}{bin\+::\+Read\+Pointer}} (std\+::string bank)
+\begin{DoxyCompactList}\small\item\em ?????? ????????? ? ??????? ???????? \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{bin_8h_a0c06c2f02f3e29dc0160a066df14c9f7}{bin\+::\+Create\+Pointer}} (size\+\_\+t ptr, size\+\_\+t size=4, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em ??????? ????????? ?? ???????? ?????????? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bin_8h_a6819fb37fc218eea3d2f754e7c7a6053}{bin\+::fsetpos}} (size\+\_\+t pos, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em ????????????? ??????? ? ????? ??? ??????????? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Authors}
+Юрков П.\+А. 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+Ответственный\+: Полевой Д.\+В. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bin_8h_a0bb9b90b984532c71acb596b04a8cf37}\label{bin_8h_a0bb9b90b984532c71acb596b04a8cf37} 
+\index{bin.h@{bin.h}!CompletePointer@{CompletePointer}}
+\index{CompletePointer@{CompletePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{CompletePointer()}{CompletePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Complete\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{pts,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{place\+\_\+back = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Заполняет массив символов нулями, для доведения указателя до нужных размеров 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pts} & -- массив символов \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- размер, до которого надо довести \\
+\hline
+\mbox{\texttt{ in}}  & {\em place\+\_\+back} & -- заполнить нулями сзади или спереди \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_ace16bb06fc4f6b7b45ba57d9f063ac12}\label{bin_8h_ace16bb06fc4f6b7b45ba57d9f063ac12} 
+\index{bin.h@{bin.h}!CompletePointer@{CompletePointer}}
+\index{CompletePointer@{CompletePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{CompletePointer()}{CompletePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string bin\+::\+Complete\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{pts,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{place\+\_\+back = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+????????? ?????? ???????? ??????, ??? ????????? ????????? ?? ?????? ???????? 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pts} & -- ?????? ???????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- ??????, ?? ???????? ???? ??????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em place\+\_\+back} & -- ????????? ?????? ????? ??? ??????? \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a21357956c8401f6f9c6b892b9fc96150}\label{bin_8h_a21357956c8401f6f9c6b892b9fc96150} 
+\index{bin.h@{bin.h}!CreatePointer@{CreatePointer}}
+\index{CreatePointer@{CreatePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{CreatePointer()}{CreatePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Create\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Создаёт указатель по заданным параметрам 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -- числовое значение указателя \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- размер указателя в байтах \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- сделать ли указатель обратным \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a0c06c2f02f3e29dc0160a066df14c9f7}\label{bin_8h_a0c06c2f02f3e29dc0160a066df14c9f7} 
+\index{bin.h@{bin.h}!CreatePointer@{CreatePointer}}
+\index{CreatePointer@{CreatePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{CreatePointer()}{CreatePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string bin\+::\+Create\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+??????? ????????? ?? ???????? ?????????? 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -- ???????? ???????? ????????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- ?????? ????????? ? ?????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- ??????? ?? ????????? ???????? \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a55b60c8752b306fa358b743ff5ad0971}\label{bin_8h_a55b60c8752b306fa358b743ff5ad0971} 
+\index{bin.h@{bin.h}!fsetpos@{fsetpos}}
+\index{fsetpos@{fsetpos}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{fsetpos()}{fsetpos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void fw\+::bin\+::fsetpos (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+
+
+
+Устанавливает позицию в файле без ограничений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & -- позиция, на которую надо переместить указатель в файле \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & -- файл, в котором надо поменять положение указателя \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a6819fb37fc218eea3d2f754e7c7a6053}\label{bin_8h_a6819fb37fc218eea3d2f754e7c7a6053} 
+\index{bin.h@{bin.h}!fsetpos@{fsetpos}}
+\index{fsetpos@{fsetpos}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{fsetpos()}{fsetpos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bin\+::fsetpos (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+
+
+
+????????????? ??????? ? ????? ??? ??????????? 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & -- ???????, ?? ??????? ???? ??????????? ????????? ? ????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & -- ????, ? ??????? ???? ???????? ????????? ????????? \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a86cb4187245647a43266ab81ea656962}\label{bin_8h_a86cb4187245647a43266ab81ea656962} 
+\index{bin.h@{bin.h}!PreparePointer@{PreparePointer}}
+\index{PreparePointer@{PreparePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{PreparePointer()}{PreparePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Prepare\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Преобразует указатель из целочисленного числа в массив символов 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -- числовое значение указателя \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- сделать ли указатель обратным \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_adb2ade8bf8aef47bc96a5df28c0a3a9c}\label{bin_8h_adb2ade8bf8aef47bc96a5df28c0a3a9c} 
+\index{bin.h@{bin.h}!PreparePointer@{PreparePointer}}
+\index{PreparePointer@{PreparePointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{PreparePointer()}{PreparePointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string bin\+::\+Prepare\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+??????????? ????????? ?? ?????????????? ????? ? ?????? ???????? 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & -- ???????? ???????? ????????? \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- ??????? ?? ????????? ???????? \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_ace7180b0842e085c5761cb4fc20c3746}\label{bin_8h_ace7180b0842e085c5761cb4fc20c3746} 
+\index{bin.h@{bin.h}!ReadPointer@{ReadPointer}}
+\index{ReadPointer@{ReadPointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{ReadPointer()}{ReadPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t fw\+::bin\+::\+Read\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{bank }\end{DoxyParamCaption})}
+
+
+
+Читает указатель с массива символов 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bank} & -- указаель, записанный в массиве символов \\
+\hline
+\end{DoxyParams}
+\Hypertarget{bin_8h_a3f12835cce68afc615eb73b37e4ec0ae}\label{bin_8h_a3f12835cce68afc615eb73b37e4ec0ae} 
+\index{bin.h@{bin.h}!ReadPointer@{ReadPointer}}
+\index{ReadPointer@{ReadPointer}!bin.h@{bin.h}}
+\doxysubsubsection{\texorpdfstring{ReadPointer()}{ReadPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily size\+\_\+t bin\+::\+Read\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{bank }\end{DoxyParamCaption})}
+
+
+
+?????? ????????? ? ??????? ???????? 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bank} & -- ????????, ?????????? ? ??????? ???????? \\
+\hline
+\end{DoxyParams}

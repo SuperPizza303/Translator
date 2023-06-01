@@ -1,0 +1,198 @@
+\doxysection{fw\+::bin\+::Offset\+Table Class Reference}
+\hypertarget{classfw_1_1bin_1_1_offset_table}{}\label{classfw_1_1bin_1_1_offset_table}\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a3eff009c7afa6a576fb42df4f4206b3d}\label{classfw_1_1bin_1_1_offset_table_a3eff009c7afa6a576fb42df4f4206b3d} 
+{\bfseries Offset\+Table} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор класса для таблицы оффсетов \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a26cafe91a73adb5fa0071359887b4f88}\label{classfw_1_1bin_1_1_offset_table_a26cafe91a73adb5fa0071359887b4f88} 
+{\bfseries Offset\+Table} (const \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{Offset\+Table}} \&ot)
+\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a98c4c54ac9960dbd58348124f469af8e}\label{classfw_1_1bin_1_1_offset_table_a98c4c54ac9960dbd58348124f469af8e} 
+{\bfseries Offset\+Table} (const std\+::string dict\+\_\+path)
+\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a9d6077b3d27a9e8d0bfffde1fc103b2e}\label{classfw_1_1bin_1_1_offset_table_a9d6077b3d27a9e8d0bfffde1fc103b2e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Offset\+Table} ()=default
+\begin{DoxyCompactList}\small\item\em Конструктор класса для таблицы оффсетов \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_af6edd53fd596176ee879c121b7e0a988}\label{classfw_1_1bin_1_1_offset_table_af6edd53fd596176ee879c121b7e0a988} 
+char {\bfseries operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a8abdb5e3d58426d882be9a3972e7f178}\label{classfw_1_1bin_1_1_offset_table_a8abdb5e3d58426d882be9a3972e7f178} 
+size\+\_\+t {\bfseries size} () const
+\begin{DoxyCompactList}\small\item\em Возвращает размер \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a1be1db343c6775be9ba53bd1c10247fa}\label{classfw_1_1bin_1_1_offset_table_a1be1db343c6775be9ba53bd1c10247fa} 
+size\+\_\+t {\bfseries end} () const
+\begin{DoxyCompactList}\small\item\em Возвращает конец файла \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a197f070f42b0220dbd04ff0c77085f24}{get\+\_\+byte\+\_\+h}} (const std\+::string i, const std\+::string j)
+\begin{DoxyCompactList}\small\item\em Возвращает значение позиции в таблице по двум 16-\/ричным числам \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a93df1c1f7124503ed9d1affcca0596eb}{get\+\_\+byte\+\_\+d}} (const size\+\_\+t i, const size\+\_\+t j)
+\begin{DoxyCompactList}\small\item\em Возвращает значение позиции в таблице по двум 10-\/ричным числам \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_af480e3169119bf9370ce735f7318eb91}{add}} (const unsigned char \&symbol)
+\begin{DoxyCompactList}\small\item\em Добавить символ в таблицу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1}{start}} (const std\+::string dict\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Начать перевод \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a862045f609db1f36e91eed933c260019}{add\+\_\+stop\+\_\+byte}} (const std\+::string sb)
+\begin{DoxyCompactList}\small\item\em Добавляет стопбайты \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a143e43c598f73a200be333f2bf4c2d97}\label{classfw_1_1bin_1_1_offset_table_a143e43c598f73a200be333f2bf4c2d97} 
+unsigned long {\bfseries get\+\_\+pos} () const
+\begin{DoxyCompactList}\small\item\em Получить позицию в таблице \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a58d39c84be7d22b8a7d55c489437e115}{set\+\_\+pos}} (const size\+\_\+t new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Установить указатель на новую позицию в таблице \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_acc93420aa20632463d317b3789f81611}{padding}} (const size\+\_\+t \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1}{start}}, const size\+\_\+t \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a1be1db343c6775be9ba53bd1c10247fa}{end}}, const char symbol=0, bool rewrite=true)
+\begin{DoxyCompactList}\small\item\em Заполняет область значением \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_adb95081148696d653f31938ed6319b03}\label{classfw_1_1bin_1_1_offset_table_adb95081148696d653f31938ed6319b03} 
+std\+::string {\bfseries get\+\_\+string} () const
+\begin{DoxyCompactList}\small\item\em Возвращает offset\+\_\+table, как строку \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_abd3ffe4c32af2b9d5495f72e41fe3d4b}{insert}} (const size\+\_\+t pos, std\+::string value)
+\begin{DoxyCompactList}\small\item\em Вставляет значение в нужную позицию \end{DoxyCompactList}\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a159c4aca949bc66fbf056e30de6ddff6}\label{classfw_1_1bin_1_1_offset_table_a159c4aca949bc66fbf056e30de6ddff6} 
+size\+\_\+t {\bfseries get\+\_\+start\+\_\+position} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfw_1_1bin_1_1_offset_table_ae3b83feb27dfa60314bfdb07b4596b21}\label{classfw_1_1bin_1_1_offset_table_ae3b83feb27dfa60314bfdb07b4596b21} 
+std\+::vector$<$ size\+\_\+t $>$ {\bfseries pointers}
+\begin{DoxyCompactList}\small\item\em вектор со всеми указателями \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_af480e3169119bf9370ce735f7318eb91}\label{classfw_1_1bin_1_1_offset_table_af480e3169119bf9370ce735f7318eb91} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!add@{add}}
+\index{add@{add}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::add (\begin{DoxyParamCaption}\item[{const unsigned char \&}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Добавить символ в таблицу 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em symbol} & -- символ, который надо занести \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a862045f609db1f36e91eed933c260019}\label{classfw_1_1bin_1_1_offset_table_a862045f609db1f36e91eed933c260019} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!add\_stop\_byte@{add\_stop\_byte}}
+\index{add\_stop\_byte@{add\_stop\_byte}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{add\_stop\_byte()}{add\_stop\_byte()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::add\+\_\+stop\+\_\+byte (\begin{DoxyParamCaption}\item[{const std\+::string}]{sb }\end{DoxyParamCaption})}
+
+
+
+Добавляет стопбайты 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sb} & -- стопбайт, который надо добавить \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a93df1c1f7124503ed9d1affcca0596eb}\label{classfw_1_1bin_1_1_offset_table_a93df1c1f7124503ed9d1affcca0596eb} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!get\_byte\_d@{get\_byte\_d}}
+\index{get\_byte\_d@{get\_byte\_d}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{get\_byte\_d()}{get\_byte\_d()}}
+{\footnotesize\ttfamily char fw\+::bin\+::\+Offset\+Table\+::get\+\_\+byte\+\_\+d (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i,  }\item[{const size\+\_\+t}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает значение позиции в таблице по двум 10-\/ричным числам 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & -- строка в 10-\/ричной системе \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & -- столбец в 10-\/ричной системе \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a197f070f42b0220dbd04ff0c77085f24}\label{classfw_1_1bin_1_1_offset_table_a197f070f42b0220dbd04ff0c77085f24} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!get\_byte\_h@{get\_byte\_h}}
+\index{get\_byte\_h@{get\_byte\_h}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{get\_byte\_h()}{get\_byte\_h()}}
+{\footnotesize\ttfamily char fw\+::bin\+::\+Offset\+Table\+::get\+\_\+byte\+\_\+h (\begin{DoxyParamCaption}\item[{const std\+::string}]{i,  }\item[{const std\+::string}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Возвращает значение позиции в таблице по двум 16-\/ричным числам 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & -- строка в 16-\/ричной системе \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & -- столбец в 16-\/ричной системе \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_abd3ffe4c32af2b9d5495f72e41fe3d4b}\label{classfw_1_1bin_1_1_offset_table_abd3ffe4c32af2b9d5495f72e41fe3d4b} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!insert@{insert}}
+\index{insert@{insert}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::insert (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{pos,  }\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+Вставляет значение в нужную позицию 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos} & -- позиция, на которую надо установить значение \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & -- значение, которое надо вставить \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_acc93420aa20632463d317b3789f81611}\label{classfw_1_1bin_1_1_offset_table_acc93420aa20632463d317b3789f81611} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!padding@{padding}}
+\index{padding@{padding}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{padding()}{padding()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::padding (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{start,  }\item[{const size\+\_\+t}]{end,  }\item[{const char}]{symbol = {\ttfamily 0},  }\item[{bool}]{rewrite = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Заполняет область значением 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & -- начало позиции для паддинга \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & -- конец позиции для паддинга \\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol} & -- значение, которым надо заполнить область \\
+\hline
+\mbox{\texttt{ in}}  & {\em rewrite} & -- переписать старые байты или сдвинуть старые значения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a58d39c84be7d22b8a7d55c489437e115}\label{classfw_1_1bin_1_1_offset_table_a58d39c84be7d22b8a7d55c489437e115} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!set\_pos@{set\_pos}}
+\index{set\_pos@{set\_pos}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{set\_pos()}{set\_pos()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::set\+\_\+pos (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{new\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Установить указатель на новую позицию в таблице 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+\_\+pos} & -- позиция, на которую надо установить указатель \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1}\label{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1} 
+\index{fw::bin::OffsetTable@{fw::bin::OffsetTable}!start@{start}}
+\index{start@{start}!fw::bin::OffsetTable@{fw::bin::OffsetTable}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void fw\+::bin\+::\+Offset\+Table\+::start (\begin{DoxyParamCaption}\item[{const std\+::string}]{dict\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Начать перевод 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dict\+\_\+path} & -- путь к таблице перевода \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Offset\+Table.\+h\item 
+Offset\+Table.\+cpp\end{DoxyCompactItemize}
