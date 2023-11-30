@@ -1,0 +1,118 @@
+\doxysection{Пространство имен fw\+::bin}
+\hypertarget{namespacefw_1_1bin}{}\label{namespacefw_1_1bin}\index{fw::bin@{fw::bin}}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{Offset\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacefw_1_1bin_a0bb9b90b984532c71acb596b04a8cf37}{Complete\+Pointer}} (std\+::string pts, size\+\_\+t size=4, bool place\+\_\+back=false)
+\begin{DoxyCompactList}\small\item\em Заполняет массив символов нулями, для доведения указателя до нужных размеров \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacefw_1_1bin_a86cb4187245647a43266ab81ea656962}{Prepare\+Pointer}} (size\+\_\+t ptr, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Преобразует указатель из целочисленного числа в массив символов \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{namespacefw_1_1bin_ace7180b0842e085c5761cb4fc20c3746}{Read\+Pointer}} (std\+::string bank)
+\begin{DoxyCompactList}\small\item\em Читает указатель с массива символов \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacefw_1_1bin_a21357956c8401f6f9c6b892b9fc96150}{Create\+Pointer}} (size\+\_\+t ptr, size\+\_\+t size=4, bool reverse=false)
+\begin{DoxyCompactList}\small\item\em Создаёт указатель по заданным параметрам \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacefw_1_1bin_a55b60c8752b306fa358b743ff5ad0971}{fsetpos}} (size\+\_\+t pos, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Устанавливает позицию в файле без ограничений \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespacefw_1_1bin_a3fc4521340c7f75a7a5dee9e892e526b}{operator$<$$<$}} (std\+::ostream \&ostrm, const \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{Offset\+Table}} \&ot)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\Hypertarget{namespacefw_1_1bin_a0bb9b90b984532c71acb596b04a8cf37}\label{namespacefw_1_1bin_a0bb9b90b984532c71acb596b04a8cf37} 
+\index{fw::bin@{fw::bin}!CompletePointer@{CompletePointer}}
+\index{CompletePointer@{CompletePointer}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{CompletePointer()}{CompletePointer()}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Complete\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{pts,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{place\+\_\+back = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Заполняет массив символов нулями, для доведения указателя до нужных размеров 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em pts} & -- массив символов \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- размер, до которого надо довести \\
+\hline
+\mbox{\texttt{ in}}  & {\em place\+\_\+back} & -- заполнить нулями сзади или спереди \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacefw_1_1bin_a21357956c8401f6f9c6b892b9fc96150}\label{namespacefw_1_1bin_a21357956c8401f6f9c6b892b9fc96150} 
+\index{fw::bin@{fw::bin}!CreatePointer@{CreatePointer}}
+\index{CreatePointer@{CreatePointer}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{CreatePointer()}{CreatePointer()}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Create\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{size\+\_\+t}]{size = {\ttfamily 4},  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Создаёт указатель по заданным параметрам 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em ptr} & -- числовое значение указателя \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & -- размер указателя в байтах \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- сделать ли указатель обратным \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacefw_1_1bin_a55b60c8752b306fa358b743ff5ad0971}\label{namespacefw_1_1bin_a55b60c8752b306fa358b743ff5ad0971} 
+\index{fw::bin@{fw::bin}!fsetpos@{fsetpos}}
+\index{fsetpos@{fsetpos}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{fsetpos()}{fsetpos()}}
+{\footnotesize\ttfamily void fw\+::bin\+::fsetpos (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f }\end{DoxyParamCaption})}
+
+
+
+Устанавливает позицию в файле без ограничений 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em pos} & -- позиция, на которую надо переместить указатель в файле \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & -- файл, в котором надо поменять положение указателя \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacefw_1_1bin_a3fc4521340c7f75a7a5dee9e892e526b}\label{namespacefw_1_1bin_a3fc4521340c7f75a7a5dee9e892e526b} 
+\index{fw::bin@{fw::bin}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& fw\+::bin\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ostrm,  }\item[{const \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{Offset\+Table}} \&}]{ot }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacefw_1_1bin_a86cb4187245647a43266ab81ea656962}\label{namespacefw_1_1bin_a86cb4187245647a43266ab81ea656962} 
+\index{fw::bin@{fw::bin}!PreparePointer@{PreparePointer}}
+\index{PreparePointer@{PreparePointer}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{PreparePointer()}{PreparePointer()}}
+{\footnotesize\ttfamily std\+::string fw\+::bin\+::\+Prepare\+Pointer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ptr,  }\item[{bool}]{reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Преобразует указатель из целочисленного числа в массив символов 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em ptr} & -- числовое значение указателя \\
+\hline
+\mbox{\texttt{ in}}  & {\em reverse} & -- сделать ли указатель обратным \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacefw_1_1bin_ace7180b0842e085c5761cb4fc20c3746}\label{namespacefw_1_1bin_ace7180b0842e085c5761cb4fc20c3746} 
+\index{fw::bin@{fw::bin}!ReadPointer@{ReadPointer}}
+\index{ReadPointer@{ReadPointer}!fw::bin@{fw::bin}}
+\doxysubsubsection{\texorpdfstring{ReadPointer()}{ReadPointer()}}
+{\footnotesize\ttfamily size\+\_\+t fw\+::bin\+::\+Read\+Pointer (\begin{DoxyParamCaption}\item[{std\+::string}]{bank }\end{DoxyParamCaption})}
+
+
+
+Читает указатель с массива символов 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em bank} & -- указаель, записанный в массиве символов \\
+\hline
+\end{DoxyParams}

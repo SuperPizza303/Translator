@@ -1,0 +1,80 @@
+\doxysection{Offset\+Table.\+h}
+\hypertarget{_offset_table_8h_source}{}\label{_offset_table_8h_source}\index{OffsetTable.h@{OffsetTable.h}}
+\mbox{\hyperlink{_offset_table_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacefw}{fw}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{namespace\ }bin}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{OffsetTable}}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a3eff009c7afa6a576fb42df4f4206b3d}{OffsetTable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a3eff009c7afa6a576fb42df4f4206b3d}{OffsetTable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{OffsetTable}}\&\ ot);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a3eff009c7afa6a576fb42df4f4206b3d}{OffsetTable}}(\textcolor{keyword}{const}\ std::string\ dict\_path);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a9d6077b3d27a9e8d0bfffde1fc103b2e}{\string~OffsetTable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_af6edd53fd596176ee879c121b7e0a988}{operator[]}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ i);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a8abdb5e3d58426d882be9a3972e7f178}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a1be1db343c6775be9ba53bd1c10247fa}{end}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a197f070f42b0220dbd04ff0c77085f24}{get\_byte\_h}}(\textcolor{keyword}{const}\ \ std::string\ i,\ \textcolor{keyword}{const}\ std::string\ j);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a93df1c1f7124503ed9d1affcca0596eb}{get\_byte\_d}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ i,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ j);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_af480e3169119bf9370ce735f7318eb91}{add}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\&\ symbol);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1}{start}}(\textcolor{keyword}{const}\ std::string\ dict\_path);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a862045f609db1f36e91eed933c260019}{add\_stop\_byte}}(\textcolor{keyword}{const}\ std::string\ sb);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a143e43c598f73a200be333f2bf4c2d97}{get\_pos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a58d39c84be7d22b8a7d55c489437e115}{set\_pos}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ new\_pos);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_acc93420aa20632463d317b3789f81611}{padding}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a089b1036b8efec9a9913b97c161ab0f1}{start}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a1be1db343c6775be9ba53bd1c10247fa}{end}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ symbol=0,\ \textcolor{keywordtype}{bool}\ rewrite=\textcolor{keyword}{true});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_adb95081148696d653f31938ed6319b03}{get\_string}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_abd3ffe4c32af2b9d5495f72e41fe3d4b}{insert}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ pos,\ std::string\ value);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_a159c4aca949bc66fbf056e30de6ddff6}{get\_start\_position}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TranslateText(\textcolor{keyword}{const}\ std::string\&\ input\_path);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FillDict(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FindStopByte(\textcolor{keyword}{const}\ std::string\&\ sb);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<size\_t>\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table_ae3b83feb27dfa60314bfdb07b4596b21}{pointers}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos;\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ offset\_table;\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ stop\_bytes;\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ dict;\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{namespacefw_1_1bin_a3fc4521340c7f75a7a5dee9e892e526b}{operator<<}}(std::ostream\&\ ostrm,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classfw_1_1bin_1_1_offset_table}{OffsetTable}}\&\ ot);}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}

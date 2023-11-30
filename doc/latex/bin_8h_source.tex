@@ -1,21 +1,22 @@
 \doxysection{bin.\+h}
-\hypertarget{bin_8h_source}{}\label{bin_8h_source}\mbox{\hyperlink{bin_8h}{Go to the documentation of this file.}}
+\hypertarget{bin_8h_source}{}\label{bin_8h_source}\index{bin.h@{bin.h}}
+\mbox{\hyperlink{bin_8h}{См. документацию.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}OWS.h"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}HexDec.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_o_w_s_8h}{OWS.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_hex_dec_8h}{HexDec.h}}"{}}}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{comment}{//\ File\ Work}}
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }fw}
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacefw}{fw}}}
 \DoxyCodeLine{00012\ \{}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Binary}}
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{namespace\ }bin}
 \DoxyCodeLine{00015\ \ \ \ \ \{\ \ \ \ \ \ \ }
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{bin_8h_a0bb9b90b984532c71acb596b04a8cf37}{CompletePointer}}(std::string\ pts,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ place\_back=\textcolor{keyword}{false})}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespacefw_1_1bin_a0bb9b90b984532c71acb596b04a8cf37}{CompletePointer}}(std::string\ pts,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ place\_back=\textcolor{keyword}{false})}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!place\_back)}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (pts.size()\ !=\ size)}
@@ -27,7 +28,7 @@
 \DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{bin_8h_a86cb4187245647a43266ab81ea656962}{PreparePointer}}(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespacefw_1_1bin_a86cb4187245647a43266ab81ea656962}{PreparePointer}}(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ rtn\ =\ \textcolor{stringliteral}{"{}"{}};}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (ptr\ !=\ 0)}
@@ -36,27 +37,27 @@
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ptr\ /=\ 256;}
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!reverse)}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ows::Reverse(rtn);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacefw_1_1ows_af5b24a85d684fd68bcdee4eb2617da8e}{ows::Reverse}}(rtn);}
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rtn;}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00048\ }
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{bin_8h_ace7180b0842e085c5761cb4fc20c3746}{ReadPointer}}(std::string\ bank)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{namespacefw_1_1bin_ace7180b0842e085c5761cb4fc20c3746}{ReadPointer}}(std::string\ bank)}
 \DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ value\ =\ 0;}
 \DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ bank.size()\ -\/\ 1;\ i\ >=\ 0;\ -\/-\/i)}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ +=\ hd::Degree(256,\ bank.size()\ -\/\ 1\ -\/\ i)\ *\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})bank[i];}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ +=\ \mbox{\hyperlink{namespacefw_1_1hd_a215dce17a0e05c409f2dfaeba85e9de5}{hd::Degree}}(256,\ bank.size()\ -\/\ 1\ -\/\ i)\ *\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})bank[i];}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00060\ }
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{bin_8h_a21357956c8401f6f9c6b892b9fc96150}{CreatePointer}}(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{namespacefw_1_1bin_a21357956c8401f6f9c6b892b9fc96150}{CreatePointer}}(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
 \DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{bin_8h_a0bb9b90b984532c71acb596b04a8cf37}{CompletePointer}}(\mbox{\hyperlink{bin_8h_a86cb4187245647a43266ab81ea656962}{PreparePointer}}(ptr,\ reverse),\ size,\ reverse);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacefw_1_1bin_a0bb9b90b984532c71acb596b04a8cf37}{CompletePointer}}(\mbox{\hyperlink{namespacefw_1_1bin_a86cb4187245647a43266ab81ea656962}{PreparePointer}}(ptr,\ reverse),\ size,\ reverse);}
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{bin_8h_a55b60c8752b306fa358b743ff5ad0971}{fsetpos}}(\textcolor{keywordtype}{size\_t}\ pos,\ FILE*\ f)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacefw_1_1bin_a55b60c8752b306fa358b743ff5ad0971}{fsetpos}}(\textcolor{keywordtype}{size\_t}\ pos,\ FILE*\ f)}
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ a\_point\ =\ pos\ /\ 2147454976;}
 \DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ fseek(f,\ 0,\ SEEK\_SET);}
@@ -71,64 +72,5 @@
 \DoxyCodeLine{00086\ }
 \DoxyCodeLine{00087\ \ \ \ \ \}}
 \DoxyCodeLine{00088\ \}}
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{namespace\ }bin}
-\DoxyCodeLine{00090\ \ \ \ \ \{\ \ \ \ \ \ \ }
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ std::string\ CompletePointer(std::string\ pts,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ place\_back=\textcolor{keyword}{false})}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!place\_back)}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (pts.size()\ !=\ size)}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pts.insert(pts.begin(),\ 0);}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (pts.size()\ !=\ size)}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pts.insert(pts.end(),\ 0);}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pts;}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::string\ PreparePointer(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ rtn\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (ptr\ !=\ 0)}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rtn.push\_back(ptr\ \%\ 256);}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ptr\ /=\ 256;}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!reverse)}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ows::Reverse(rtn);}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rtn;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00124\ }
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ ReadPointer(std::string\ bank)}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ value\ =\ 0;}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ bank.size()\ -\/\ 1;\ i\ >=\ 0;\ -\/-\/i)}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ +=\ hd::Degree(256,\ bank.size()\ -\/\ 1\ -\/\ i)\ *\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char})bank[i];}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::string\ CreatePointer(\textcolor{keywordtype}{size\_t}\ ptr,\ \textcolor{keywordtype}{size\_t}\ size=4,\ \textcolor{keywordtype}{bool}\ reverse=\textcolor{keyword}{false})}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CompletePointer(PreparePointer(ptr,\ reverse),\ size,\ reverse);}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ fsetpos(\textcolor{keywordtype}{size\_t}\ pos,\ FILE*\ f)}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ a\_point\ =\ pos\ /\ 2147454976;}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ fseek(f,\ 0,\ SEEK\_SET);}
-\DoxyCodeLine{00153\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ a\_point;\ ++i)}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fseek(f,\ 2147454976,\ SEEK\_CUR);}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos\ -\/=\ 2147454976;}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ fseek(f,\ pos\ \%\ 2147454976,\ SEEK\_CUR);}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00161\ }
-\DoxyCodeLine{00162\ \ \ \ \ \}}
-\DoxyCodeLine{00163\ \}}
 
 \end{DoxyCode}
