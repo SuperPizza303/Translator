@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Файл bin.h</title>
+<title>My Project: Файл OffsetTable.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,18 +74,23 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
 <a href="#namespaces">Пространства имен</a> &#124;
 <a href="#func-members">Функции</a>  </div>
-  <div class="headertitle"><div class="title">Файл bin.h</div></div>
+  <div class="headertitle"><div class="title">Файл OffsetTable.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="_o_w_s_8h_source.html">OWS.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_hex_dec_8h_source.html">HexDec.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 </div>
-<p><a href="bin_8h_source.html">См. исходные тексты.</a></p>
+<p><a href="_offset_table_8h_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfw_1_1bin_1_1_offset_table.html">fw::bin::OffsetTable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
 <tr class="memitem:namespacefw" id="r_namespacefw"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw.html">fw</a></td></tr>
@@ -95,26 +100,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a0bb9b90b984532c71acb596b04a8cf37" id="r_a0bb9b90b984532c71acb596b04a8cf37"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#a0bb9b90b984532c71acb596b04a8cf37">fw::bin::CompletePointer</a> (std::string pts, size_t size=4, bool place_back=false)</td></tr>
-<tr class="memdesc:a0bb9b90b984532c71acb596b04a8cf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заполняет массив символов нулями, для доведения указателя до нужных размеров  <br /></td></tr>
-<tr class="separator:a0bb9b90b984532c71acb596b04a8cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86cb4187245647a43266ab81ea656962" id="r_a86cb4187245647a43266ab81ea656962"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#a86cb4187245647a43266ab81ea656962">fw::bin::PreparePointer</a> (size_t ptr, bool reverse=false)</td></tr>
-<tr class="memdesc:a86cb4187245647a43266ab81ea656962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует указатель из целочисленного числа в массив символов  <br /></td></tr>
-<tr class="separator:a86cb4187245647a43266ab81ea656962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace7180b0842e085c5761cb4fc20c3746" id="r_ace7180b0842e085c5761cb4fc20c3746"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#ace7180b0842e085c5761cb4fc20c3746">fw::bin::ReadPointer</a> (std::string bank)</td></tr>
-<tr class="memdesc:ace7180b0842e085c5761cb4fc20c3746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает указатель с массива символов  <br /></td></tr>
-<tr class="separator:ace7180b0842e085c5761cb4fc20c3746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21357956c8401f6f9c6b892b9fc96150" id="r_a21357956c8401f6f9c6b892b9fc96150"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#a21357956c8401f6f9c6b892b9fc96150">fw::bin::CreatePointer</a> (size_t ptr, size_t size=4, bool reverse=false)</td></tr>
-<tr class="memdesc:a21357956c8401f6f9c6b892b9fc96150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт указатель по заданным параметрам  <br /></td></tr>
-<tr class="separator:a21357956c8401f6f9c6b892b9fc96150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b60c8752b306fa358b743ff5ad0971" id="r_a55b60c8752b306fa358b743ff5ad0971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#a55b60c8752b306fa358b743ff5ad0971">fw::bin::fsetpos</a> (size_t pos, FILE *f)</td></tr>
-<tr class="memdesc:a55b60c8752b306fa358b743ff5ad0971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает позицию в файле без ограничений  <br /></td></tr>
-<tr class="separator:a55b60c8752b306fa358b743ff5ad0971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc4521340c7f75a7a5dee9e892e526b" id="r_a3fc4521340c7f75a7a5dee9e892e526b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefw_1_1bin.html#a3fc4521340c7f75a7a5dee9e892e526b">fw::bin::operator&lt;&lt;</a> (std::ostream &amp;ostrm, const <a class="el" href="classfw_1_1bin_1_1_offset_table.html">OffsetTable</a> &amp;ot)</td></tr>
+<tr class="separator:a3fc4521340c7f75a7a5dee9e892e526b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><dl class="section author"><dt>Авторы</dt><dd>Юрков П.А. </dd></dl>
-<dl class="section note"><dt>Заметки</dt><dd>Ответственный: Полевой Д.В. </dd></dl>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
