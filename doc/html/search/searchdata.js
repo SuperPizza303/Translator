@@ -1,27 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "abcefgioprs~",
+  0: "abcdefghioprstw~",
   1: "o",
-  2: "b",
-  3: "acefgioprs~",
-  4: "p"
+  2: "f",
+  3: "bhot",
+  4: "abcdefghioprstw~",
+  5: "p"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables"
 };
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Variables"
+  0: "Указатель",
+  1: "Классы",
+  2: "Пространства имен",
+  3: "Файлы",
+  4: "Функции",
+  5: "Переменные"
 };
 
