@@ -1,46 +1,123 @@
-//! @file docktests
-//! @authors Юрков П.А.
-//! @note Ответственный: Полевой Д.В.
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include <doctest.h>
+п»ї//! @file main
+//! @authors Р®СЂРєРѕРІ Рџ.Рђ.
+//! @note РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№: РџРѕР»РµРІРѕР№ Р”.Р’.
 #include <filesystem>
 #include <CurseLib/Translation.cpp>
 
 namespace fs = std::filesystem;
 
-//! @brief Перемещение позиции указателя в файлах file1 и file2 вперёд на pos байтов
-//! @param[in] file1 -- первый передаваемый файл
-//! @param[in] file2 -- второй передаваемый файл
-//! @param[in] pos -- количество байтов, на которое надо передвинуть указатель
+//! @brief РџРµСЂРµРјРµС‰РµРЅРёРµ РїРѕР·РёС†РёРё СѓРєР°Р·Р°С‚РµР»СЏ РІ С„Р°Р№Р»Р°С… file1 Рё file2 РІРїРµСЂС‘Рґ РЅР° pos Р±Р°Р№С‚РѕРІ
+//! @param[in] file1 -- РїРµСЂРІС‹Р№ РїРµСЂРµРґР°РІР°РµРјС‹Р№ С„Р°Р№Р»
+//! @param[in] file2 -- РІС‚РѕСЂРѕР№ РїРµСЂРµРґР°РІР°РµРјС‹Р№ С„Р°Р№Р»
+//! @param[in] pos -- РєРѕР»РёС‡РµСЃС‚РІРѕ Р±Р°Р№С‚РѕРІ, РЅР° РєРѕС‚РѕСЂРѕРµ РЅР°РґРѕ РїРµСЂРµРґРІРёРЅСѓС‚СЊ СѓРєР°Р·Р°С‚РµР»СЊ
 void change_positions(FILE* file1, FILE* file2, size_t pos)
 {
     fseek(file1, pos, SEEK_CUR);
     fseek(file2, pos, SEEK_CUR);
 }
 
-TEST_CASE("Tests")
+
+std::vector<std::string> get_args(int argc, char* argv[])
+{
+    // i, o, t
+    //  input=C:
+    //  -i path вє
+    // --input вє
+    //  path
+    std::vector<std::string> rtn = std::vector<std::string>(3, "");
+    int j = 0;
+
+    for (int i = 1; i < argc; ++i)
+    {
+        //std::cout << argv[i] << std::endl;
+        if (_stricmp(argv[i], "-i") == 0 || _stricmp(argv[i], "--input") == 0)
+        {
+            ++i;
+            rtn[0] = argv[i];
+            continue;
+        }
+        else if (_stricmp(argv[i], "-o") == 0 || _stricmp(argv[i], "--output") == 0)
+        {
+            ++i;
+            rtn[1] = argv[i];
+            continue;
+        }
+        else if (_stricmp(argv[i], "-t") == 0 || _stricmp(argv[i], "--table") == 0)
+        {
+            ++i;
+            rtn[2] = argv[i];
+            continue;
+        }
+        
+        std::vector<std::string> tmp;
+        std::string str = argv[i];
+
+        if (std::find(str.begin(), str.end(), '=') != str.end())
+        {
+            tmp = fw::ows::Split(str, '=');
+            if (tmp[0] == "input")
+            {
+                rtn[0] = tmp[1];
+                continue;
+            }
+            if (tmp[0] == "output")
+            {
+                rtn[1] = tmp[1];
+                continue;
+            }
+            if (tmp[0] == "table")
+            {
+                rtn[2] = tmp[1];
+                continue;
+            }
+        }
+
+        rtn[j] = argv[i];
+        ++j;
+
+    }
+    return rtn;
+}
+
+
+int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "");
+    std::vector<std::string> args;
+    std::string table, 
+                in, 
+                out, 
+                answers;
 
-    fs::path currentPath = fs::current_path(); //!< Путь до .exe файла
+    args = get_args(argc, argv);
 
-    std::string table, in, out, answers;
-    table = currentPath.string() + "\\Test_Table.tbl"; //!< Путь до таблицы перевода
-    in = currentPath.string() + "\\Input"; //!< Путь до входных данных
-    answers = currentPath.string() + "\\Right_answers"; //!< Путь до правильных ответов для проверки
-    out = currentPath.string() + "\\Output"; //!<  Путь до папки, в которую надо сохранить выходные файлы
+    fs::path currentPath = fs::current_path(); //!< РџСѓС‚СЊ РґРѕ .exe С„Р°Р№Р»Р°
 
-    fw::bin::OffsetTable ot(table); //!< Путь до таблицы оффсетов
-    
+    if (args[0] == "")
+        in = currentPath.string() + "\\Input"; //!< РџСѓС‚СЊ РґРѕ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
+    else
+        in = args[0];
+    if (args[1] == "")
+        out = currentPath.string() + "\\Output"; //!<  РџСѓС‚СЊ РґРѕ РїР°РїРєРё, РІ РєРѕС‚РѕСЂСѓСЋ РЅР°РґРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РІС‹С…РѕРґРЅС‹Рµ С„Р°Р№Р»С‹
+    else
+        out = args[1];
+    if (args[2] == "")
+        table = currentPath.string() + "\\Test_Table.tbl"; //!< РџСѓС‚СЊ РґРѕ С‚Р°Р±Р»РёС†С‹ РїРµСЂРµРІРѕРґР°
+    else
+        table = args[2];
+
+    fw::bin::OffsetTable ot(table); //!< РџСѓС‚СЊ РґРѕ С‚Р°Р±Р»РёС†С‹ РѕС„С„СЃРµС‚РѕРІ
+
     ot.add_stop_byte("[END]");
+
     for (auto dir : std::filesystem::directory_iterator{ in })
     {
-        std::string infile_name = dir.path().string(); //!< Наименование входного файла
-        std::string outfile_name; //!< Наименование выходного файла
-        std::string outfile_path; //!< Путь до выходного файла
-        std::string result_bytes = ""; //!< Контрольные байты в результирующем файле 
-        std::string check_bytes = ""; //!< Контрольные байты в файле ответов
-        size_t ctrl_byte = 0; //!< Байт для проверки достижения конца файла
+        std::string infile_name = dir.path().string(); //!< РќР°РёРјРµРЅРѕРІР°РЅРёРµ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
+        std::string outfile_name; //!< РќР°РёРјРµРЅРѕРІР°РЅРёРµ РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
+        std::string outfile_path; //!< РџСѓС‚СЊ РґРѕ РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
+        std::string result_bytes = ""; //!< РљРѕРЅС‚СЂРѕР»СЊРЅС‹Рµ Р±Р°Р№С‚С‹ РІ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРј С„Р°Р№Р»Рµ 
+        std::string check_bytes = ""; //!< РљРѕРЅС‚СЂРѕР»СЊРЅС‹Рµ Р±Р°Р№С‚С‹ РІ С„Р°Р№Р»Рµ РѕС‚РІРµС‚РѕРІ
+        size_t ctrl_byte = 0; //!< Р‘Р°Р№С‚ РґР»СЏ РїСЂРѕРІРµСЂРєРё РґРѕСЃС‚РёР¶РµРЅРёСЏ РєРѕРЅС†Р° С„Р°Р№Р»Р°
 
         std::vector split_path = fw::ows::Split(infile_name, '\\');
         infile_name = split_path[split_path.size() - 1];
@@ -50,78 +127,6 @@ TEST_CASE("Tests")
         infile_name = dir.path().string();
 
         translate_file(infile_name, outfile_path, ot);
-
-        FILE* result = fopen(outfile_path.c_str(), "rb");
-        FILE* check = fopen((answers + "\\" + outfile_name + "_check").c_str(), "rb");
-
-        SUBCASE("HEADER")
-        {
-            for (short i = 0; i < 8; ++i)
-            {
-                result_bytes += fgetc(result);
-                check_bytes += fgetc(check);
-            }
-            CHECK(check_bytes == result_bytes);
-        }
-
-        change_positions(check, result, 8);
-
-        SUBCASE("AMOUNT OF POINTERS")
-        {
-            result_bytes = "";
-            check_bytes = "";
-            for (short i = 0; i < 8; ++i)
-            {
-                result_bytes += fgetc(result);
-                check_bytes += fgetc(check);
-            }
-            CHECK(check_bytes == result_bytes);
-        }
-
-        change_positions(check, result, 8);
-
-        SUBCASE("START POSITION")
-        {
-            result_bytes = "";
-            check_bytes = "";
-            for (short i = 0; i < 8; ++i)
-            {
-                result_bytes += fgetc(result);
-                check_bytes += fgetc(check);
-            }
-            CHECK(check_bytes == result_bytes);
-        }
-
-        change_positions(check, result, 8);
-
-        SUBCASE("POINTERS CHECK")
-        {
-            result_bytes = "";
-            check_bytes = "";
-            for (size_t i = 0; i < ot.get_start_position() - 16; ++i)
-            {
-                result_bytes += fgetc(result);
-                check_bytes += fgetc(check);
-            }
-            CHECK(check_bytes == result_bytes);
-        }
-
-        change_positions(check, result, ot.get_start_position() - 16);
-
-        SUBCASE("TRANSLATION CHECK")
-        {
-            result_bytes = "";
-            check_bytes = "";
-            while (ctrl_byte != EOF)
-            {
-                ctrl_byte = fgetc(result);
-                result_bytes += ctrl_byte;
-                check_bytes += fgetc(check);
-            }
-            CHECK(check_bytes == result_bytes);
-        }
-
-        fclose(result);
-        fclose(check);
     }
+
 }

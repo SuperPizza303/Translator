@@ -18,11 +18,13 @@ namespace fw
 			//! @brief Конструктор класса для таблицы оффсетов
 			OffsetTable() = default;
 
+			//! @brief Конструктор класса для таблицы оффсетов
 			OffsetTable(const OffsetTable& ot);
 
+			//! @brief Конструктор класса для таблицы оффсетов
 			OffsetTable(const std::string dict_path);
 
-			//! @brief Конструктор класса для таблицы оффсетов
+			//! @brief Деструктор класса для таблицы оффсетов
 			~OffsetTable() = default;
  
 			//! @brief Перегрузка оператора []
